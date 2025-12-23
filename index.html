@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fast, Affordable Drywall Repair in Texas. Same-day service, licensed & insured. Call now for a free quote!">
+    <title>OnPoint Pros - Drywall Repair Experts | Same Day Service</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, #2563eb, #1e40af);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .logo-text {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1e40af;
+        }
+
+        .logo-text span {
+            color: #f59e0b;
+        }
+
+        .header-cta {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .phone-number {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1e40af;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, #2563eb, #1e40af);
+            color: white;
+            padding: 14px 28px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 120px 5% 80px;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .usp-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #10b981, #059669);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #1e293b;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #2563eb;
+        }
+
+        .hero-subheadline {
+            font-size: 1.2rem;
+            color: #64748b;
+            margin-bottom: 30px;
+        }
+
+        .hero-benefits {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .hero-benefits li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+            color: #475569;
+        }
+
+        .check-icon {
+            width: 24px;
+            height: 24px;
+            background: #10b981;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+
+        .hero-image-placeholder {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #64748b;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+
+        .hero-image-placeholder svg {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 15px;
+            opacity: 0.5;
+        }
+
+        .rating-badge {
+            position: absolute;
+            bottom: -20px;
+            left: 20px;
+            background: white;
+            padding: 15px 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .stars {
+            color: #f59e0b;
+            font-size: 1.2rem;
+        }
+
+        .rating-text {
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        /* Lead Form Section */
+        .lead-form-section {
+            padding: 80px 5%;
+            background: #fff;
+        }
+
+        .lead-form-container {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .lead-form-container h2 {
+            font-size: 2rem;
+            color: #1e293b;
+            margin-bottom: 10px;
+        }
+
+        .lead-form-container p {
+            color: #64748b;
+            margin-bottom: 30px;
+        }
+
+        .lead-form {
+            background: #f8fafc;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 16px 20px;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #2563eb;
+        }
+
+        .form-group input::placeholder {
+            color: #94a3b8;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 18px;
+            font-size: 1.1rem;
+        }
+
+        .trust-text {
+            margin-top: 15px;
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+
+        .trust-text svg {
+            width: 16px;
+            height: 16px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+        /* Trust Section */
+        .trust-section {
+            padding: 80px 5%;
+            background: #f8fafc;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            color: #1e293b;
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            color: #64748b;
+            font-size: 1.1rem;
+        }
+
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        }
+
+        .testimonial-stars {
+            color: #f59e0b;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-text {
+            color: #475569;
+            font-style: italic;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .author-avatar {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, #2563eb, #1e40af);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+        }
+
+        .author-info strong {
+            display: block;
+            color: #1e293b;
+        }
+
+        .author-info span {
+            font-size: 0.85rem;
+            color: #94a3b8;
+        }
+
+        .trust-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            padding: 30px 0;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .trust-logo {
+            padding: 15px 25px;
+            background: white;
+            border-radius: 10px;
+            color: #64748b;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Offer Section */
+        .offer-section {
+            padding: 80px 5%;
+            background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
+            color: white;
+        }
+
+        .offer-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .offer-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .offer-container h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .offer-price {
+            font-size: 4rem;
+            font-weight: 800;
+            color: #fbbf24;
+            margin: 20px 0;
+        }
+
+        .offer-price span {
+            font-size: 1.5rem;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .offer-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+            text-align: left;
+        }
+
+        .offer-benefit {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 15px 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+        }
+
+        .offer-benefit-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .offer-cta {
+            margin-top: 30px;
+        }
+
+        .btn-white {
+            background: white;
+            color: #1e40af;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: inline-block;
+        }
+
+        .btn-white:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            padding: 80px 5%;
+            background: #fff;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .gallery-item {
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .gallery-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .gallery-before, .gallery-after {
+            position: relative;
+            height: 200px;
+            background: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .gallery-before {
+            background: linear-gradient(135deg, #fecaca, #fca5a5);
+        }
+
+        .gallery-after {
+            background: linear-gradient(135deg, #bbf7d0, #86efac);
+        }
+
+        .gallery-label {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 5px 12px;
+            border-radius: 5px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .gallery-before .gallery-label {
+            background: #dc2626;
+            color: white;
+        }
+
+        .gallery-after .gallery-label {
+            background: #16a34a;
+            color: white;
+        }
+
+        .gallery-icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .gallery-caption {
+            padding: 20px;
+            background: #f8fafc;
+            text-align: center;
+        }
+
+        .gallery-caption strong {
+            display: block;
+            color: #1e293b;
+            margin-bottom: 5px;
+        }
+
+        .gallery-caption span {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        /* Final CTA Section */
+        .final-cta {
+            padding: 80px 5%;
+            background: #1e293b;
+            color: white;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .final-cta p {
+            color: #94a3b8;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .final-cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .final-phone {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #fbbf24;
+            margin-bottom: 20px;
+        }
+
+        .final-phone a {
+            color: #fbbf24;
+            text-decoration: none;
+        }
+
+        .final-tagline {
+            color: #64748b;
+            font-size: 1rem;
+        }
+
+        /* Sticky CTA */
+        .sticky-cta {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: 15px 5%;
+            box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+            z-index: 999;
+        }
+
+        .sticky-cta-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .sticky-text {
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .sticky-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 30px 5%;
+            background: #0f172a;
+            color: #64748b;
+            text-align: center;
+        }
+
+        .footer p {
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .header {
+                padding: 12px 4%;
+            }
+
+            .logo-text {
+                font-size: 1.1rem;
+            }
+
+            .phone-number {
+                display: none;
+            }
+
+            .hero {
+                padding: 100px 5% 60px;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-subheadline {
+                font-size: 1rem;
+            }
+
+            .hero-image {
+                order: -1;
+            }
+
+            .hero-image-placeholder {
+                height: 250px;
+            }
+
+            .rating-badge {
+                bottom: -15px;
+                left: 15px;
+                padding: 10px 15px;
+            }
+
+            .lead-form {
+                padding: 25px;
+            }
+
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+
+            .offer-container h2 {
+                font-size: 1.8rem;
+            }
+
+            .offer-price {
+                font-size: 3rem;
+            }
+
+            .final-cta h2 {
+                font-size: 1.8rem;
+            }
+
+            .final-phone {
+                font-size: 1.5rem;
+            }
+
+            .sticky-cta {
+                display: block;
+            }
+
+            .sticky-text {
+                display: none;
+            }
+
+            .sticky-buttons {
+                width: 100%;
+            }
+
+            .sticky-buttons a {
+                flex: 1;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+
+            .btn-primary, .btn-secondary {
+                padding: 12px 20px;
+                font-size: 0.95rem;
+            }
+
+            .gallery-comparison {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-before, .gallery-after {
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <div class="logo-icon">OP</div>
+            <div class="logo-text">OnPoint<span>Pros</span></div>
+        </div>
+        <div class="header-cta">
+            <a href="tel:+15127018183" class="phone-number">📞 (512) 701-8183</a>
+            <a href="tel:+15127018183" class="btn-primary">Call Now</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="usp-badge">⚡ Same Day Service Available</div>
+                <h1>We Fix Holes, Cracks & Damage <span>in Just One Visit</span></h1>
+                <p class="hero-subheadline">Serving Texas Homeowners and Contractors with 5-Star Drywall Repair – Fast, Affordable, and Guaranteed.</p>
+                
+                <ul class="hero-benefits">
+                    <li><span class="check-icon">✓</span> Free, No-Obligation Quotes</li>
+                    <li><span class="check-icon">✓</span> Licensed & Fully Insured</li>
+                    <li><span class="check-icon">✓</span> 5-Year Workmanship Guarantee</li>
+                    <li><span class="check-icon">✓</span> Clean, Professional Technicians</li>
+                </ul>
+
+                <div class="hero-cta">
+                    <a href="tel:+15127018183" class="btn-primary">📞 Call for Free Quote</a>
+                    <a href="#quote-form" class="btn-secondary">Get Quote Online</a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <div class="hero-image-placeholder">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                    </svg>
+                    <span>Professional Drywall Repair</span>
+                </div>
+                <div class="rating-badge">
+                    <span class="stars">★★★★★</span>
+                    <span class="rating-text">5.0 Rating</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lead Form Section -->
+    <section class="lead-form-section" id="quote-form">
+        <div class="lead-form-container">
+            <h2>Get Your Free Quote</h2>
+            <p>Fill out the form below and we'll call you within 15 minutes!</p>
+            
+            <form class="lead-form" action="https://formspree.io/f/your-form-id" method="POST">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="phone" placeholder="Phone Number" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="zipcode" placeholder="Zip Code" required>
+                </div>
+                <button type="submit" class="btn-primary form-submit">Get My Free Quote →</button>
+                <p class="trust-text">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                    </svg>
+                    No obligation. 100% satisfaction guaranteed.
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Trusted by Texas Homeowners</h2>
+                <p>See what our satisfied customers have to say</p>
+            </div>
+
+            <div class="testimonials">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"They showed up on time, fixed the hole in my wall perfectly, and even painted it to match. You can't even tell there was ever damage. Highly recommend!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JM</div>
+                        <div class="author-info">
+                            <strong>Jennifer M.</strong>
+                            <span>Austin, TX</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Fast, professional, and affordable. I had water damage in my ceiling and they repaired it same day. The finish looks brand new. Great service!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RK</div>
+                        <div class="author-info">
+                            <strong>Robert K.</strong>
+                            <span>Round Rock, TX</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"I've used them twice now for drywall repairs. Both times they were prompt, clean, and the quality of work was excellent. Will definitely use again!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SM</div>
+                        <div class="author-info">
+                            <strong>Sarah M.</strong>
+                            <span>Cedar Park, TX</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Best drywall repair experience I've had. They were honest about pricing upfront and the work exceeded my expectations. 5 stars!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">DL</div>
+                        <div class="author-info">
+                            <strong>David L.</strong>
+                            <span>Pflugerville, TX</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trust-logos">
+                <div class="trust-logo">🏠 500+ Happy Homeowners</div>
+                <div class="trust-logo">⭐ 5-Star Google Rating</div>
+                <div class="trust-logo">✅ Licensed & Insured</div>
+                <div class="trust-logo">🛡️ 5-Year Guarantee</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offer Section -->
+    <section class="offer-section">
+        <div class="offer-container">
+            <span class="offer-badge">🔥 LIMITED TIME SPECIAL</span>
+            <h2>Small Hole Repair Special</h2>
+            <div class="offer-price">$99 <span>starting at</span></div>
+            <p>Professional repair for holes up to 4 inches – includes patching, texturing & primer!</p>
+
+            <div class="offer-benefits">
+                <div class="offer-benefit">
+                    <div class="offer-benefit-icon">⚡</div>
+                    <span>Same-Day & Next-Day Service</span>
+                </div>
+                <div class="offer-benefit">
+                    <div class="offer-benefit-icon">👔</div>
+                    <span>Clean, Professional Technicians</span>
+                </div>
+                <div class="offer-benefit">
+                    <div class="offer-benefit-icon">📋</div>
+                    <span>Licensed & Fully Insured</span>
+                </div>
+                <div class="offer-benefit">
+                    <div class="offer-benefit-icon">🛡️</div>
+                    <span>5-Year Workmanship Guarantee</span>
+                </div>
+            </div>
+
+            <div class="offer-cta">
+                <a href="tel:+15127018183" class="btn-white">📞 Claim This Offer – Call Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Our Work Speaks for Itself</h2>
+                <p>From damage to perfect finish – in just hours</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-comparison">
+                        <div class="gallery-before">
+                            <span class="gallery-label">Before</span>
+                            <span class="gallery-icon">🕳️</span>
+                            <span>Large Hole</span>
+                        </div>
+                        <div class="gallery-after">
+                            <span class="gallery-label">After</span>
+                            <span class="gallery-icon">✨</span>
+                            <span>Perfect Finish</span>
+                        </div>
+                    </div>
+                    <div class="gallery-caption">
+                        <strong>Doorknob Hole Repair</strong>
+                        <span>Completed in 2 hours</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-comparison">
+                        <div class="gallery-before">
+                            <span class="gallery-label">Before</span>
+                            <span class="gallery-icon">💧</span>
+                            <span>Water Damage</span>
+                        </div>
+                        <div class="gallery-after">
+                            <span class="gallery-label">After</span>
+                            <span class="gallery-icon">✨</span>
+                            <span>Like New</span>
+                        </div>
+                    </div>
+                    <div class="gallery-caption">
+                        <strong>Ceiling Water Damage</strong>
+                        <span>Completed same day</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="gallery-comparison">
+                        <div class="gallery-before">
+                            <span class="gallery-label">Before</span>
+                            <span class="gallery-icon">📐</span>
+                            <span>Crack Damage</span>
+                        </div>
+                        <div class="gallery-after">
+                            <span class="gallery-label">After</span>
+                            <span class="gallery-icon">✨</span>
+                            <span>Seamless Wall</span>
+                        </div>
+                    </div>
+                    <div class="gallery-caption">
+                        <strong>Corner Crack Repair</strong>
+                        <span>Completed in 3 hours</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <h2>Ready to Fix Your Drywall?</h2>
+        <p>Get your free quote today – no obligation, no hassle.</p>
+        
+        <div class="final-phone">
+            <a href="tel:+15127018183">📞 (512) 701-8183</a>
+        </div>
+
+        <div class="final-cta-buttons">
+            <a href="tel:+15127018183" class="btn-primary">Call Now for Free Quote</a>
+            <a href="#quote-form" class="btn-secondary">Book Online</a>
+        </div>
+
+        <p class="final-tagline">Local Drywall Repair Experts – Fast, Affordable, Guaranteed.</p>
+    </section>
+
+    <!-- Sticky CTA (Mobile) -->
+    <div class="sticky-cta">
+        <div class="sticky-cta-content">
+            <span class="sticky-text">Get Your Free Quote Today!</span>
+            <div class="sticky-buttons">
+                <a href="tel:+15127018183" class="btn-primary">📞 Call Now</a>
+                <a href="#quote-form" class="btn-secondary">Get Quote</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 OnPoint Pros. All Rights Reserved. | Serving Austin, Round Rock, Cedar Park, Pflugerville & Surrounding Areas</p>
+    </footer>
+
+    <!-- Smooth Scroll Script -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Show sticky CTA on scroll (mobile)
+        window.addEventListener('scroll', function() {
+            const stickyCta = document.querySelector('.sticky-cta');
+            if (window.innerWidth <= 768) {
+                if (window.scrollY > 500) {
+                    stickyCta.style.display = 'block';
+                } else {
+                    stickyCta.style.display = 'none';
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
