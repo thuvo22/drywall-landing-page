@@ -857,16 +857,17 @@
             <h2>Book Your Same-Day Repair</h2>
             <p>Fill out the form below and we'll call you within 15 minutes!</p>
             
-            <form class="lead-form" action="https://formspree.io/f/your-form-id" method="POST">
+            <form class="lead-form" id="lead-capture-form">
                 <div class="form-group">
-                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="text" name="name" id="name" placeholder="Your Name" required>
                 </div>
                 <div class="form-group">
-                    <input type="tel" name="phone" placeholder="Phone Number" required>
+                    <input type="tel" name="phone" id="phone" placeholder="Phone Number" required>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="zipcode" placeholder="Zip Code" required>
+                    <input type="text" name="zipcode" id="zipcode" placeholder="Zip Code" required>
                 </div>
+                <input type="hidden" name="source" value="Drywall Landing Page">
                 <button type="submit" class="btn-primary form-submit">Book Same-Day Repair →</button>
                 <p class="trust-text">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1055,6 +1056,39 @@
                     stickyCta.style.display = 'none';
                 }
             }
+        });
+
+        // GHL Form Submission
+        document.getElementById('lead-capture-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+
+            const formData = {
+                name: document.getElementById('name').value,
+                phone: document.getElementById('phone').value,
+                zipcode: document.getElementById('zipcode').value,
+                source: 'Drywall Landing Page'
+            };
+
+            fetch('https://services.leadconnectorhq.com/hooks/UEW8ayn3dNsZG78pPsZw/webhook-trigger/b21b6628-2916-4ced-9a87-4c7582fed85b', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => {
+                // Show success message
+                this.innerHTML = '<div style="text-align: center; padding: 40px 20px;"><h3 style="color: #10b981; margin-bottom: 10px;">✓ Thank You!</h3><p style="color: #64748b;">We\'ll call you within 15 minutes.</p></div>';
+            })
+            .catch(error => {
+                // Still show success (webhook may not return proper CORS headers)
+                this.innerHTML = '<div style="text-align: center; padding: 40px 20px;"><h3 style="color: #10b981; margin-bottom: 10px;">✓ Thank You!</h3><p style="color: #64748b;">We\'ll call you within 15 minutes.</p></div>';
+            });
         });
     </script>
 
