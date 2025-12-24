@@ -862,6 +862,9 @@
                     <input type="text" name="name" id="name" placeholder="Your Name" required>
                 </div>
                 <div class="form-group">
+                    <input type="email" name="email" id="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
                     <input type="tel" name="phone" id="phone" placeholder="Phone Number" required>
                 </div>
                 <div class="form-group">
@@ -1069,6 +1072,7 @@
 
             const formData = {
                 name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
                 phone: document.getElementById('phone').value,
                 zipcode: document.getElementById('zipcode').value,
                 source: 'Drywall Landing Page'
