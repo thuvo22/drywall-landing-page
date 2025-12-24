@@ -902,7 +902,7 @@
 
             <!-- Video Section -->
             <div style="max-width: 600px; margin: 40px auto 40px; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
-                <video controls playsinline style="width: 100%; display: block;">
+                <video id="autoplayVideo" controls playsinline muted style="width: 100%; display: block;">
                     <source src="images/video.MOV" type="video/quicktime">
                     <source src="images/video.MOV" type="video/mp4">
                     Your browser does not support the video tag.
@@ -1109,6 +1109,21 @@
                 this.innerHTML = '<div style="text-align: center; padding: 40px 20px;"><h3 style="color: #10b981; margin-bottom: 10px;">✓ Thank You!</h3><p style="color: #64748b;">We\'ll call you within 15 minutes.</p></div>';
             });
         });
+    </script>
+
+    <!-- Video Autoplay on Scroll -->
+    <script>
+        const video = document.getElementById('autoplayVideo');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    video.play();
+                } else {
+                    video.pause();
+                }
+            });
+        }, { threshold: 0.5 });
+        observer.observe(video);
     </script>
 
 </body>
