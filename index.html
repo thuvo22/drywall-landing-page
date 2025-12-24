@@ -812,11 +812,13 @@
             }
 
             .gallery-comparison {
-                grid-template-columns: 1fr;
+                display: flex;
+                flex-direction: column;
             }
 
             .gallery-before, .gallery-after {
                 height: 150px;
+                width: 100%;
             }
         }
     </style>
